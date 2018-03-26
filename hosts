@@ -1,7 +1,6 @@
 [webservers]
-web3
+web
 
 [dbservers]
-web2
-
+db
 
