@@ -24,7 +24,10 @@ RUN echo "===> Adding Ansible's PPA..."  && \
     \
     \
     echo "===> Adding hosts for local development and test..."  && \
-    echo 'localhost' > /etc/ansible/hosts
+    echo 'localhost' > /etc/ansible/hosts && \
+    mkdir ~/.ssh && \
+    echo "StrictHostKeyChecking=no" > ~/.ssh/config && \
+    chmod 400 ~/.ssh/config
 
 # default command: display Ansible version
 # CMD [ "ansible-playbook", "--version" ]
